@@ -1,0 +1,4 @@
+<h2>When: <%= @appointment.appointment_datetime.to_date.to_s(:long) %> at <%= @appointment.appointment_datetime.strftime("%H:%M") %></h2>
+
+<h3>Doctor: <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor_id) %></h3>
+<h3>Patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient_id) %></h3>
